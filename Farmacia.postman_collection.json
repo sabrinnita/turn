@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "c9ea21da-efb0-45a4-bc75-e8dadc336e09",
+		"name": "Farmacia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetLocales",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://farmanet.minsal.cl/maps/index.php/ws/getLocalesRegion?id_region=7",
+					"protocol": "https",
+					"host": [
+						"farmanet",
+						"minsal",
+						"cl"
+					],
+					"path": [
+						"maps",
+						"index.php",
+						"ws",
+						"getLocalesRegion"
+					],
+					"query": [
+						{
+							"key": "id_region",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "turn",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idRegion\":\"7\",\n\t\"idComuna\":\"110\",\n\t\"nombre\":\"AHUMADA\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/turn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"turn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetComunas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "reg_id",
+							"value": "7",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://midastest.minsal.cl/farmacias/maps/index.php/utilidades/maps_obtener_comunas_por_regiones",
+					"protocol": "https",
+					"host": [
+						"midastest",
+						"minsal",
+						"cl"
+					],
+					"path": [
+						"farmacias",
+						"maps",
+						"index.php",
+						"utilidades",
+						"maps_obtener_comunas_por_regiones"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

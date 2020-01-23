@@ -1,0 +1,30 @@
+{
+  "name": "turn",
+  "version": "1.0.0",
+  "description": "Farmacias de turno por comuna",
+  "main": "index.js",
+  "scripts": {
+    "unit-test": "./node_modules/mocha/bin/mocha ./*.spec.js -t 10000",
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "turn"
+  },
+  "keywords": [
+    "turn",
+    "pharmacy"
+  ],
+  "author": "Sabrina Torres",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "express": "^4.17.1",
+    "mocha": "^3.5.0",
+    "mochawesome": "^2.3.0",
+    "mock-req-res": "^1.1.4",
+    "mockery": "2.0.0",
+    "request": "^2.81.0",
+    "sinon": "^8.1.1"
+  }
+}
